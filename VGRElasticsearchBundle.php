@@ -1,9 +1,9 @@
 <?php
 
-namespace Village\ElasticSearchBundle;
+namespace VGR\ElasticsearchBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class VillageElasticSearchBundle extends Bundle
+class VGRElasticsearchBundle extends Bundle
 {
 }
