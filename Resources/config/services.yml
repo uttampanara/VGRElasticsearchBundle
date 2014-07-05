@@ -1,0 +1,14 @@
+parameters:
+#    core.example.class: Bundle\ElasticsearchBundle\Example
+    vgr.elasticsearch.manager.elasticsearch.class: VGR\ElasticsearchBundle\Manager\ElasticsearchManager
+
+services:
+#    core.example:
+#        class: %core.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+    vgr.elasticsearch.manager.elasticsearch:
+        class:  %vgr.elasticsearch.manager.elasticsearch.class%
+        arguments:
+            - %elasticsearch_host%
+            - %elasticsearch_port%
+            - %elasticsearch_credentials%
