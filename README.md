@@ -254,7 +254,7 @@ class Client extends BaseClient implements ElasticsearchEntityInterface
      */
     public static function getElasticsearchEntityService($mainObject)
     {
-        static::$_elasticsearchEntityService = new \Village\ElasticSearchBundle\Service\ElasticsearchEntityService($mainObject);
+        static::$_elasticsearchEntityService = new \VGR\ElasticsearchBundle\Service\ElasticsearchEntityService($mainObject);
 
         return static::$_elasticsearchEntityService;
     }
