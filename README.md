@@ -111,7 +111,7 @@ class MyEntity extends ElasticsearchEntity
      */
     public function getId()
     {
-        return str_replace('.', '', $this->getLatitude().$this->getLongitude().strtolower(base64_encode($this->getName())));
+        return str_replace('.', '', $this->getLatitude().$this->getLongitude());
     }
 
     /**
@@ -430,3 +430,34 @@ class MyEntityRepository extends ElasticsearchEntityRepository
 }
 ```
 
+Examples
+--------
+
+Get a document as entity from repository.
+
+``` php
+
+$myEntityRepository = $esm->getRepository('Test\CoreBundle\Entity\MyEntity');
+$myEntity = $myEntityRepository->findOneById('4150210');
+```
+
+Create a document from entity if not exists.
+
+``` php
+
+$myEntityRepository = $esm->getRepository('Test\CoreBundle\Entity\MyEntity');
+$myEntity = $myEntityRepository->findOneById('4150210');
+if(empty($myEntity))
+{
+    $myEntity = new MyEntity();
+    $myEntity->setLatitude(41.50);
+    $myEntity->setLongitude(2.10);
+    $myEntity->setName('test');
+
+    $esm->persist($myEntity);
+
+    $output->writeln('Created new document in elasticsearch');
+}else{
+    $output->writeln('Document found in elasticsearch');
+}
+```

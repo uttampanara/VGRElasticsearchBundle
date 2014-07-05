@@ -127,9 +127,9 @@ class ElasticsearchEntityService implements ElasticsearchEntityServiceInterface
         $class = $this->getMainObject();
         if(is_object($class))
         {
-            return (empty($class->_repository))? 'Village\ElasticSearchBundle\Model\ElasticSearchEntityRepository' : $class->_repository;
+            return (empty($class->_repository))? 'VGR\ElasticsearchBundle\Model\ElasticsearchEntityRepository' : $class->_repository;
         }else{
-            return 'Village\ElasticSearchBundle\Model\ElasticSearchEntityRepository';
+            return 'VGR\ElasticsearchBundle\Model\ElasticsearchEntityRepository';
         }
     }
 
