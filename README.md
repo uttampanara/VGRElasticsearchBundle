@@ -41,7 +41,7 @@ public function registerBundles()
 # app/config/parameters.yml
 elasticsearch_host: 'localhost'
 elasticsearch_port: 9200
-elasticsearch_credentials: 'test:MYPASSWORD'
+elasticsearch_credentials: null
 ```
 
 Create entity
