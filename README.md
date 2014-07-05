@@ -446,12 +446,12 @@ Create a document from entity if not exists.
 ``` php
 
 $myEntityRepository = $esm->getRepository('Test\CoreBundle\Entity\MyEntity');
-$myEntity = $myEntityRepository->findOneById('4150210');
+$myEntity = $myEntityRepository->findOneById('41521');
 if(empty($myEntity))
 {
     $myEntity = new MyEntity();
-    $myEntity->setLatitude(41.50);
-    $myEntity->setLongitude(2.10);
+    $myEntity->setLatitude(41.5);
+    $myEntity->setLongitude(2.1);
     $myEntity->setName('test');
 
     $esm->persist($myEntity);
