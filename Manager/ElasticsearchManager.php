@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Created by PhpStorm.
  * User: vgrdominik
@@ -136,7 +136,7 @@ class ElasticsearchManager
     {
         $path = '/'.$index.'/'.$type.'/'.'_search';
 
-        return $this->sendRequest(($this->getApi() === true)? 'POST' : 'GET', $path, $map); // '/'.$index.'/'.$type.
+        return $this->sendRequest('GET', $path, $map); // '/'.$index.'/'.$type.
     }
 
     /**
@@ -189,7 +189,6 @@ class ElasticsearchManager
      */
     public function put($index, $type, $id, $document)
     {
-        //$index = ($this->getApi() === true)? 'village-'.$index : $index;
         return $this->sendRequest('POST', '/'.$index.'/'.$type.'/'.$id, $document);
     }
 
