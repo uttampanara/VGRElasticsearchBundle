@@ -1,4 +1,4 @@
-ï»¿<?php
+<?php
 /**
  * Created by PhpStorm.
  * User: vgrdominik
@@ -11,10 +11,11 @@ namespace VGR\ElasticsearchBundle\Manager;
 use VGR\ElasticsearchBundle\Model\ElasticsearchEntityInterface;
 use VGR\ElasticsearchBundle\Model\ElasticsearchEntityRepository;
 
+
 /**
  * Class ElasticsearchManager
  * @package VGR\ElasticsearchBundle\Manager
- * @author ValentÃ­ GÃ mez Rojas <vgr.gamez@gmail.com>
+ * @author Valentí Gàmez Rojas <vgr.gamez@gmail.com>
  */
 class ElasticsearchManager
 {
